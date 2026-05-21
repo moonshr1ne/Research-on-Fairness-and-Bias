@@ -1,0 +1,10 @@
+claim_id,claim,value,source_file,source_filter
+DATA-001,The IBM HR Employee Attrition dataset contains employee records used for attrition prediction.,"1470 rows, 37 columns",outputs/data_profile.csv,all rows
+EDA-001,"The target is imbalanced, so accuracy alone is insufficient.",Attrition=Yes rate: 0.161,outputs/raw_group_summary.csv,overall target distribution from source data
+EDA-GENDER,Raw attrition rates differ across Gender groups.,"Female: 0.148, Male: 0.170; max gap=0.022",outputs/raw_group_summary.csv,attribute == Gender
+EDA-AGEGROUP,Raw attrition rates differ across AgeGroup groups.,"30-40: 0.143, 40+: 0.109, <30: 0.279; max gap=0.170",outputs/raw_group_summary.csv,attribute == AgeGroup
+MODEL-BASELINE,The main baseline is Logistic Regression with protected attributes included.,"ROC-AUC=0.785, F1=0.453, Gender DP gap=0.069, AgeGroup DP gap=0.163",outputs/model_metrics.csv,model == LR_all_features
+H1,Removing protected features reduces Gender DP gap by no more than 30%.,observed=-1.039033457249071; decision=supported,outputs/hypothesis_summary.csv,hypothesis == H1 Proxy persistence
+H2,AgeGroup DP gap exceeds Gender DP gap by at least 0.05.,observed=0.09420282712674599; decision=supported,outputs/hypothesis_summary.csv,hypothesis == H2 Age disparity dominance
+H3,Reweighting reduces Gender DP gap by at least 25% and decreases ROC-AUC or F1.,"observed=gap_reduction=-0.383, auc_drop=0.003; decision=not supported / partially falsified",outputs/hypothesis_summary.csv,hypothesis == H3 Mitigation trade-off
+H4,RandomForest improves ROC-AUC by at least 0.02 but does not necessarily improve fairness.,"observed=auc_gain=0.019, gender_dp_change=-0.053; decision=not supported",outputs/hypothesis_summary.csv,hypothesis == H4 Model complexity trade-off

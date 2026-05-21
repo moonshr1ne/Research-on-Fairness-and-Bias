@@ -1,0 +1,3 @@
+dataset,task,target_positive_rate,baseline_roc_auc,baseline_f1,gender_dp_gap,agegroup_dp_gap
+IBM HR Attrition,predict employee attrition,0.1612244897959183,0.7848877046060144,0.45320197044334976,0.06921097770154372,0.1634138048282897
+Employee Promotion,predict promotion recommendation,0.08517004816815062,0.7956847988148261,0.32252410166520595,0.029582009145446342,0.10843279608881429

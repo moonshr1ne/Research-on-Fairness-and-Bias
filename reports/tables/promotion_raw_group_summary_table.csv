@@ -1,0 +1,6 @@
+attribute,group,n,promotion_rate,raw_promotion_rate_gap_for_attribute
+gender,f,16312,0.0899,0.0068
+gender,m,38496,0.0832,0.0068
+AgeGroup,30-40,28030,0.0912,0.0193
+AgeGroup,40+,12325,0.0719,0.0193
+AgeGroup,<30,14453,0.0848,0.0193

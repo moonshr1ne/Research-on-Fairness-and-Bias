@@ -1,0 +1,5 @@
+hypothesis,pre_registered_rule,observed_value,decision
+H1 Proxy persistence,Removing protected features reduces Gender DP gap by no more than 30%.,-1.039033457249071,supported
+H2 Age disparity dominance,AgeGroup DP gap exceeds Gender DP gap by at least 0.05.,0.09420282712674599,supported
+H3 Mitigation trade-off,Reweighting reduces Gender DP gap by at least 25% and decreases ROC-AUC or F1.,"gap_reduction=-0.383, auc_drop=0.003",not supported / partially falsified
+H4 Model complexity trade-off,RandomForest improves ROC-AUC by at least 0.02 but does not necessarily improve fairness.,"auc_gain=0.019, gender_dp_change=-0.053",not supported

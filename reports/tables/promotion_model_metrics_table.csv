@@ -1,0 +1,7 @@
+accuracy,f1,roc_auc,gender_dp_gap,gender_eo_gap,gender_fpr_gap,gender_equalized_odds_gap,AgeGroup_dp_gap,AgeGroup_eo_gap,AgeGroup_fpr_gap,AgeGroup_equalized_odds_gap,model
+0.9149,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Majority
+0.7649,0.3225,0.7957,0.0296,0.017,0.0309,0.0309,0.1084,0.0601,0.1031,0.1031,LR_all_features
+0.7607,0.318,0.7941,0.0253,0.0272,0.0272,0.0272,0.038,0.0201,0.0348,0.0348,LR_without_protected
+0.8182,0.3414,0.7843,0.0158,0.0052,0.0149,0.0149,0.0898,0.108,0.0793,0.108,RandomForest
+0.9386,0.4453,0.8138,0.0011,0.0341,0.0,0.0341,0.0033,0.0459,0.0001,0.0459,GradientBoosting
+0.7648,0.3231,0.7953,0.0015,0.0467,0.0029,0.0467,0.1092,0.0619,0.1042,0.1042,LR_reweighting_gender

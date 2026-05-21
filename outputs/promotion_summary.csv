@@ -1,0 +1,3 @@
+check,observed_value,interpretation
+Promotion baseline fairness,"gender_dp_gap=0.030, agegroup_dp_gap=0.108",AgeGroup gap is larger
+Promotion proxy persistence,gender_dp_reduction=0.145,Protected-feature removal reduced the gap
