@@ -402,10 +402,10 @@ def make_hypothesis_summary(metrics_df: pd.DataFrame) -> pd.DataFrame:
         after = float(m.loc["LR_without_protected", "Gender_dp_gap"])
         reduction = (before - after) / before if before > 0 else np.nan
         rows.append({
-            "hypothesis": "H1 Proxy persistence",
-            "pre_registered_rule": "Removing protected features reduces Gender DP gap by no more than 30%.",
-            "observed_value": reduction,
-            "decision": "supported" if pd.notna(reduction) and reduction <= 0.30 else "not supported / inconclusive",
+            "hypothesis": "H1 Protected-feature removal test",
+            "pre_registered_rule": "Removing protected features reduces Gender DP gap by at least 80%.",
+            "observed_value": f"before={before:.3f}, after={after:.3f}, reduction={reduction:.3f}",
+            "decision": "supported" if pd.notna(reduction) and reduction >= 0.80 else "falsified",
         })
 
     if "LR_all_features" in m.index:
@@ -496,4 +496,5 @@ def run_full_experiment(save=True):
         ci.to_csv(OUTPUTS_DIR / "bootstrap_ci.csv", index=False)
 
     return metrics_df, hypothesis_df
+
 

@@ -1,4 +1,4 @@
-# Fairness and Bias in ML Models for HR Automation
+﻿# Fairness and Bias in ML Models for HR Automation
 
 This repository supports the course project **Research on Fairness and Bias in Machine Learning Models for HR Automation**. Its purpose is practical: every numerical claim in the report should be traceable to executable code and generated artifacts.
 
@@ -110,3 +110,4 @@ The pipeline does not create synthetic promotion data. If `data/promotion_train.
 ## Notes for the Report
 
 The repository does not claim that the IBM dataset proves real-world discrimination by a specific employer. It is used as a controlled HR analytics case study. The correct interpretation is: if group-level outcome rates, prediction rates or error rates differ, the model requires fairness analysis before deployment in a high-stakes HR setting.
+
