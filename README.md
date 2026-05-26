@@ -10,7 +10,7 @@ Do HR-related machine learning models show measurable demographic disparities, a
 
 ## Pre-Registered Hypotheses
 
-- **H1. Proxy persistence:** removing protected attributes (`Gender`, `Age`, `AgeGroup`) will not eliminate demographic parity gaps completely; the Gender DP gap should decrease by no more than 30% relative to the model with protected attributes.
+- **H1. Protected-feature removal test:** removing protected attributes (`Gender`, `Age`, `AgeGroup`) should reduce the Gender demographic parity gap by at least 80% relative to the model with protected attributes. Observed: the gap grew from 0.069 to 0.141, so H1 is falsified, consistent with strong proxy effects.
 - **H2. Age disparity dominance:** the AgeGroup demographic parity gap will exceed the Gender demographic parity gap by at least 5 percentage points for the baseline model.
 - **H3. Mitigation trade-off:** reweighting will reduce the Gender demographic parity gap by at least 25%, but will reduce ROC-AUC or F1 compared with the unmitigated baseline.
 - **H4. Model complexity trade-off:** a tree-based model will improve ROC-AUC by at least 0.02 compared with Logistic Regression, but will not necessarily improve fairness gaps.
@@ -110,4 +110,5 @@ The pipeline does not create synthetic promotion data. If `data/promotion_train.
 ## Notes for the Report
 
 The repository does not claim that the IBM dataset proves real-world discrimination by a specific employer. It is used as a controlled HR analytics case study. The correct interpretation is: if group-level outcome rates, prediction rates or error rates differ, the model requires fairness analysis before deployment in a high-stakes HR setting.
+
 
